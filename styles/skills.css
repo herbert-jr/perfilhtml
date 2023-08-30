@@ -1,0 +1,284 @@
+.pastel {
+  --color-bg-principal: #fef6e4;
+  --color-headline-principal: #001858;
+  --color-text-principal: #172c66;
+  --color-link-principal: #f582ae;
+  --color-link-text-principal: #001858;
+  --color-bg-section: #f3d2c1;
+  --color-headline-section: #001858;
+  --color-text-section: #172c66;
+  --card-bg-section: #fef6e4; 
+  --card-headline-section: #001858; 
+  --card-text-section: #172c66; 
+  --color-bg-alternative: #fffffe;
+  --color-secondary: #8bd3dd;
+  --color-terciary: #f582ae;
+}
+
+.skills {
+  background-color: var(--color-bg-section);
+  width: 100vw;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: var(--color-headline-section);
+}
+
+.skillLink a {
+  padding: 1rem;
+  background-color: var(--color-link-principal);
+  border-radius: 5px;
+  color: var(--color-link-text-principal);
+  font-weight: 800;
+  position: relative;
+  transition: transform .3s ease-in-out;
+}
+
+.skillLink a::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 5%;
+  width: 90%;
+  height: 10px;
+  background-color: var(--color-headline-principal);
+  opacity: 0.4;
+  border-radius: 50%;
+  filter: blur(7px);
+  transition: all .5s;
+} 
+
+.skillLink a:hover {
+  transform: translateY(-10px);
+
+}
+
+.skillLink a:hover::after {
+  bottom: -25px;
+  opacity: 0.25;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .SkilltextArea, .skillText, .languagesContainer  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .skillText i,
+  .skillText h5 {
+    font-size: 2.2rem;
+  }
+
+  .knowContainer {
+    background-color: var(--card-bg-section);
+    padding: 1rem;
+    color: var(--card-text-section);
+  }
+
+  .languagesContainer h5 {
+    font-size: 1.5rem;
+  }
+
+  .languages, .skillLink {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .languages i {
+    transition: all .3s ease-in-out;
+    font-size: 2.5rem;
+  }
+
+  .languages i:hover  {
+    transform: scale(1.1) translateY(-10px);
+  }
+
+  .languages i:hover {
+    color: var(--card-headline-section);
+  }
+
+  .skillLink {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+
+}
+
+@media (max-width: 950px) and (min-width: 601px) {
+ .SkilltextArea {
+  display: grid;
+  grid-template-areas: 
+  'text1 text2'
+  'text3 text4';
+  gap: 1rem;
+ }
+
+ .SkilltextArea:nth-child(1) {
+  grid-area: text1;
+ }
+
+ .SkilltextArea:nth-child(2) {
+  grid-area: text2;
+ }
+
+ .SkilltextArea:nth-child(3) {
+  grid-area: text3;
+ }
+
+ .SkilltextArea:nth-child(4) {
+  grid-area: text4;
+ }
+
+ .skillText i,
+  .skillText h5 {
+    font-size: 2.2rem;
+  }
+
+  .knowContainer {
+    background-color: var(--card-bg-section);
+    padding: 1rem;
+    color: var(--card-text-section);
+    text-align: center;
+  }
+
+  .languagesContainer h5 {
+    font-size: 1.5rem;
+  }
+
+  .languages, .skillLink {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .languages i {
+    transition: all .3s ease-in-out;
+    font-size: 2.8rem;
+    padding: 1.5rem;
+  }
+
+  .languages i:hover, .skillLink a:hover  {
+    transform: scale(1.1) translateY(-10px);
+  }
+
+  .languages i:hover {
+    color: var(--card-headline-section);
+  }
+
+  .skillLink {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .skillLink a {
+    padding: 1rem;
+    background-color: var(--color-link-principal);
+    border-radius: 5px;
+    color: var(--color-link-text-principal);
+    font-weight: 800;
+    position: relative;
+    transition: transform .3s ease-in-out;
+  }
+}
+
+@media (min-width: 951px) {
+  .skills {
+    max-width: 1440px;
+    display: grid;
+    grid-template-areas: 
+    'title title'
+    'text languages';
+  }
+  .title {
+    grid-area: title;
+  }
+  .SkilltextArea {
+    grid-area: languages;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .skillText i,
+  .skillText h5 {
+    font-size: 2.2rem;
+  }
+
+  .skillText {
+    width: 48%;
+  }
+  .knowContainer {
+    background-color: var(--card-bg-section);
+    padding: 1rem;
+    color: var(--card-text-section);
+    grid-area: text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .languagesContainer h5 {
+    font-size: 1.5rem;
+  }
+
+  .languages, .skillLink {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .languages i {
+    transition: all .3s ease-in-out;
+    font-size: 2.8rem;
+    padding: 1rem;
+  }
+
+  .languages i:hover, .skillLink a:hover  {
+    transform: scale(1.1) translateY(-10px);
+  }
+
+  .languages i:hover {
+    color: var(--card-headline-section);
+  }
+
+  .skillLink {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .skillLink a {
+    padding: 1rem;
+    background-color: var(--color-link-principal);
+    border-radius: 5px;
+    color: var(--color-link-text-principal);
+    font-weight: 800;
+    position: relative;
+    transition: transform .3s ease-in-out;
+  }
+}

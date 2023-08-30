@@ -1,0 +1,132 @@
+.project {
+  padding: 1rem 2rem;
+}
+
+.pastel {
+  --color-bg-principal: #fef6e4;
+  --color-headline-principal: #001858;
+  --color-text-principal: #172c66;
+  --color-link-principal: #f582ae;
+  --color-link-text-principal: #001858;
+  --color-bg-section: #f3d2c1;
+  --color-headline-section: #001858;
+  --color-text-section: #172c66;
+  --card-bg-section: #fef6e4; 
+  --card-headline-section: #001858; 
+  --card-text-section: #172c66; 
+  --color-bg-alternative: #fffffe;
+  --color-secondary: #8bd3dd;
+  --color-terciary: #f582ae;
+}
+
+.linkProject {
+  background-color: var(--color-bg-section);
+  color: var(--color-headline-section);
+  text-align: center;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1rem 2rem;
+  border-radius: 20px;
+}
+
+.linkProject h3{
+ font-size: 2rem;
+}
+
+.linkProject a {
+  color: var(--color-headline-section);
+  position: relative;
+  padding: 1rem;
+  background-color: var(--color-link-principal);
+  border-radius: 5px;
+  transition: all .5s;
+
+}
+
+.linkProject a::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 5%;
+  width: 90%;
+  height: 10px;
+  background-color: var(--color-headline-principal);
+  opacity: 0.4;
+  border-radius: 50%;
+  filter: blur(7px);
+  transition: all .5s;
+} 
+
+.linkProject a:hover {
+  transform: translateY(-10px);
+
+}
+
+.linkProject a:hover::after {
+  bottom: -25px;
+  opacity: 0.25;
+  width: 100%;
+}
+
+
+@media (max-width: 600px) {
+  .project, .containerProject, .aboutPort {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .aboutPort {
+    color: var(--color-text-principal);
+    line-height: 1.5;
+    flex: 1;
+  }
+
+
+}
+
+@media (max-width: 950px) and (min-width: 601px) {
+  .project, .aboutPort {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 2rem;
+  }
+
+  .containerProject {
+    display: flex;
+    align-items: center;
+    gap:  1rem;
+  }
+
+  .aboutPort {
+    color: var(--color-text-principal);
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  .linkProject {
+    flex: 1;
+  }
+
+
+}
+
+@media (min-width: 951px) {
+  .project, .aboutPort {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 1rem;
+  }
+
+  .containerProject {
+    display: flex;
+    align-items: center;
+    gap:  1rem;
+  }
+}

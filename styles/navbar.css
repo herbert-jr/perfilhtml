@@ -1,0 +1,214 @@
+
+.btnToggleNav {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+
+@media screen and (max-width: 600px) {
+
+
+  .linha {
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-headline-principal);
+    border-radius: 6px;
+    transition: 0.5s;
+  }
+
+  .linha:nth-child(1) {
+    transform: translateY(-10px);
+    width: 15px;
+    left: 6px;
+  }
+  
+  .linha:nth-child(2) {
+    transform: translateY(10px);
+    width: 8px;
+    left: 6px;
+  }
+
+  .btnToggleNav.openMenuNav .linha:nth-child(3) {
+    transform: translateX(60px);
+  }
+  
+  .btnToggleNav.openMenuNav .linha:nth-child(1) {
+    width: 28px;
+    transform: translateY(0) rotate(45deg);
+  }
+  
+  .btnToggleNav.openMenuNav .linha:nth-child(2) {
+    width: 28px;
+    transform: translateY(0) rotate(315deg);
+  }
+
+  .list {
+      overflow: hidden;
+      position: absolute;
+      background-color: var(--color-bg-section);
+      left: 0;
+      transform: translateX(100%);
+      width: 100%;
+      top: 7rem;
+      height: calc(100vh - 7rem);
+      transition: 1s;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      align-items: flex-start;
+      justify-content: space-around;
+    }
+
+    .listItem {
+      padding-inline: 2rem;
+      font-size: 2.4rem;
+      font-family: 'Abril Fatface', sans-serif;
+    }
+
+    .listItem a {
+      position: relative;
+    }
+
+    .listItem a::before {
+      content: '';
+      position: absolute;
+      left: -3rem;
+      bottom: -10px;
+      height: 10px;
+      width: 0;
+      transform-origin: left;
+      background-color: var(--color-link-principal);
+      transition: width .5s ease-in;
+    }
+
+    .listItem a:hover::before {
+      width: calc(100% + 3rem);
+
+    }
+
+    .list.openMenuNav {
+      transform: translateX(0);
+
+    }
+}
+
+@media (max-width: 950px) and (min-width: 601px) {
+
+
+  .linha {
+    position: absolute;
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-headline-principal);
+    border-radius: 6px;
+    transition: 0.5s;
+  }
+
+  .linha:nth-child(1) {
+    transform: translateY(-10px);
+    width: 15px;
+    left: 6px;
+  }
+  
+  .linha:nth-child(2) {
+    transform: translateY(10px);
+    width: 8px;
+    left: 6px;
+  }
+
+  .btnToggleNav.openMenuNav .linha:nth-child(3) {
+    transform: translateX(60px);
+  }
+  
+  .btnToggleNav.openMenuNav .linha:nth-child(1) {
+    width: 28px;
+    transform: translateY(0) rotate(45deg);
+  }
+  
+  .btnToggleNav.openMenuNav .linha:nth-child(2) {
+    width: 28px;
+    transform: translateY(0) rotate(315deg);
+  }
+
+  .list {
+      overflow: hidden;
+      position: absolute;
+      background-color: var(--color-bg-section);
+      right: 0;
+      transform: translateX(100%);
+      width: 50%;
+      top: 7rem;
+      height: calc(50vh - 7rem);
+      transition: 1s;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      align-items: center;
+      font-size: 22px;
+      justify-content: space-around;
+    }
+
+    .list.openMenuNav {
+      transform: translateX(0);
+
+    }
+  }
+
+  @media (min-width: 951px) {
+    .btnToggleNav {
+      display: none;
+    }
+
+    .list {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+
+   .list a {
+      width: fit-content;
+      position: relative;
+      padding: 2px;
+    }
+    
+    .list a::after,  .list a::before{
+      content: "";
+      position: absolute;
+      background-color: var(--color-secondary);
+      height: 3px;
+      border-radius: 2px;
+      width: 0;
+      transition: width .5s ease;
+      
+    }
+
+    .list a::after {
+      bottom: 0;
+      left: 0;
+      transform-origin: left;
+    }
+
+    .list a::before {
+      top: 0;
+      right: 0;
+      transform-origin: right;
+    }
+
+    .list a:hover:after, .list a:hover::before {
+      width: 100%;
+    }
+
+    .list a::before {
+      top: 0;
+      right: 0;
+      transform-origin: right;
+    }
+  }
