@@ -151,13 +151,40 @@
       display: flex;
       flex-direction: column;
       padding: 1rem;
-      align-items: center;
+      align-items: flex-start;
       font-size: 22px;
       justify-content: space-around;
     }
 
     .list.openMenuNav {
       transform: translateX(0);
+
+    }
+
+    .listItem {
+      padding-inline: 2rem;
+      font-size: 2.4rem;
+      font-family: 'Abril Fatface', sans-serif;
+    }
+
+    .listItem a {
+      position: relative;
+    }
+
+    .listItem a::before {
+      content: '';
+      position: absolute;
+      left: -3rem;
+      bottom: -10px;
+      height: 10px;
+      width: 0;
+      transform-origin: left;
+      background-color: var(--color-link-principal);
+      transition: width .5s ease-in;
+    }
+
+    .listItem a:hover::before {
+      width: calc(100% + 3rem);
 
     }
   }

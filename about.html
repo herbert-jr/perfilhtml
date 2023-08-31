@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Sobre mim</title>
   </head>
   <body>
     <header class="header" id="header">
@@ -15,22 +15,6 @@
       </div>
       <!-- Fim do profile -->
       <div class="menus">
-        <nav class="containerNav">
-          <div class="btnToggleNav" id="btnToggleNav">
-            <span class="linha"></span>
-            <span class="linha"></span>
-            <span class="linha"></span>
-          </div>
-          <ul class="list" id="listNav">
-            <li class="listItem"><a href="index.html">Home</a></li>
-            <li class="listItem"><a href="projects.html">Projetos</a></li>
-            <li class="listItem">
-              <a href="certificates.html">Certificados</a>
-            </li>
-            <li class="listItem">contatos</li>
-          </ul>
-        </nav>
-        <!-- Fim da navegação -->
         <div class="temas">
           <button class="btnThemes" id="btnThemes">
             <i class="fa-solid fa-paint-roller"></i>
@@ -54,11 +38,86 @@
           </ul>
         </div>
         <!-- Fim da parte dos temas -->
+        <nav class="containerNav">
+          <div class="btnToggleNav" id="btnToggleNav">
+            <span class="linha"></span>
+            <span class="linha"></span>
+            <span class="linha"></span>
+          </div>
+          <ul class="list" id="listNav">
+            <li class="listItem"><a href="index.html">Home</a></li>
+            <li class="listItem"><a href="projects.html">Projetos</a></li>
+            <li class="listItem">
+              <a href="certificates.html">Certificados</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Fim da navegação -->
       </div>
       <!-- Fim dos menus -->
     </header>
     <!-- Fim do Header -->
-    <h1>about</h1>
+    <main>
+      <section class="sectionAboutPage">
+        <img src="images/picofme.png" alt="Foto Herbert" />
+        <div class="aboutMePageText">
+          <h1>E aí, beleza?</h1>
+          <p>Sou o Herbert Junior, desenvolvedor front-end from Rio!</p>
+
+          <p>
+            Minha jornada no mundo do desenvolvimento começou há cerca de 10
+            meses atrás. Desde o momento em que me apresentaram o front-end já
+            sabia que esse era o lugar onde eu queria estar e crecer.
+          </p>
+
+          <p>
+            Hoje, o meu foco principal é aprofundar cada vez mais o meu
+            conhecimento nas ferramentas e práticas dessa área, com o objetivo
+            de criar interfaces acessíveis, de alto desempenho e imersivas para
+            os usuários.
+          </p>
+        </div>
+        <div class="aboutMePageText">
+          <h1>Estudos</h1>
+          <p>
+            Atualmente curso Desenvolvimento Web pela Trybe e tenho a conclusão
+            prevista para <strong>outubro de 2023.</strong>
+          </p>
+
+          <p>
+            Afim de aprofundar ainda mais meus conhecimento estou cursando
+            Análise e Desenvolvimento de Sistemas na Faculdade Descomplica com a
+            conclusão prevista <strong>julho de 2025.</strong>
+          </p>
+        </div>
+        <div class="aboutMePageText">
+          <h1>Offline</h1>
+          <p>
+            Quando não estou mergulhado na programação ou aprendendo novas
+            técnicas de codificação, curto relaxar assistindo a um filme ou uma
+            série. Recomendo conferirem "The Bear". Além disso, o vôlei é uma
+            verdadeira paixão para mim. Sempre que tenho a chance, pergunto aos
+            amigos onde está rolando algum jogo.
+          </p>
+        </div>
+        <div class="aboutMePageText">
+          <h1>Online</h1>
+          <div class="contatos">
+            <a
+              href="https://www.linkedin.com/in/herbert-marques-963136106/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://github.com/herbert-jr" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="https://www.instagram.com/juniorherbert/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="script/header.js"></script>
     <script src="script/navbar.js"></script>
     <script src="script/themes.js"></script>

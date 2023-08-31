@@ -6,6 +6,9 @@
 @import 'styles/about.css';
 @import 'styles/skills.css';
 @import 'styles/project.css';
+@import 'styles/footer.css';
+@import 'styles/aboutPage.css';
+@import 'styles/certificadesPage.css';
 
 :root {
   .pastel {

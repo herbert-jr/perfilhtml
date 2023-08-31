@@ -15,6 +15,10 @@
   --color-terciary: #f582ae;
 }
 
+.knowContainer {
+  border-radius: 20px;
+}
+
 .skills {
   background-color: var(--color-bg-section);
   width: 100vw;
